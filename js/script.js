@@ -1,3 +1,4 @@
+
 const scarchPhone=()=>{
     const searchFild=document.getElementById('input-fild');
     const searchValue=searchFild.value;
@@ -8,8 +9,17 @@ const scarchPhone=()=>{
 }
 
 const showProduct=products=>{
+     console.log(products);
+    if(products.status==false){
+        document.getElementById('error').style.display='block';
+    }
+    else{
+        document.getElementById('error').style.display='none';
+    }
+    const showallProduct=document.getElementById('showAllproduct');
+    showallProduct.innerHTML='';
     for(let product of products.data){
-        const showallProduct=document.getElementById('showAllproduct');
+       
         const div=document.createElement('div');
         div.innerHTML=`
         <div class="py-8 bg-slate-50 rounded-2xl drop-shadow-lg">
@@ -35,7 +45,16 @@ const showDetails=details=>{
 }
 
 const allDetails=importDetails=>{
+
+    console.log(importDetails.data.image);
+    const imageShow=document.getElementById('imageShow');
+    imageShow.innerHTML='';
+    const img=document.createElement('img');
+    img.src=`${importDetails.data.image}`;
+    imageShow.appendChild(img);
+
     const infoshow=document.getElementById('infoshow');
+        infoshow.innerHTML='';
         const div=document.createElement('div');
         div.innerHTML=`
         <h1 class="font-bold text-2xl text-center pt-4 ">Details</h1>
@@ -51,4 +70,7 @@ const allDetails=importDetails=>{
         <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">ChipSet:</span><span class="font-medium">${importDetails.data.mainFeatures.chipSet}</span></p>
     </div>`;
     infoshow.appendChild(div);
+    
+    
+    
 }
