@@ -1,4 +1,4 @@
-
+// search function 
 const scarchPhone=()=>{
     const searchFild=document.getElementById('input-fild');
     const searchValue=searchFild.value;
@@ -7,6 +7,7 @@ const scarchPhone=()=>{
     .then(data=>showProduct(data))
     searchFild.value='';
 }
+// product function 
 
 const showProduct=products=>{
      console.log(products);
@@ -35,6 +36,8 @@ const showProduct=products=>{
     }
 }
 
+// show details function 
+
 const showDetails=details=>{
     
     const url=`https://openapi.programming-hero.com/api/phone/${details}`
@@ -43,6 +46,8 @@ const showDetails=details=>{
     .then(data =>allDetails(data))
 
 }
+
+// allDetails function 
 
 const allDetails=importDetails=>{
 
