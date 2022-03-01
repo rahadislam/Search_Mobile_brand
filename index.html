@@ -9,14 +9,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1 class="font-bold text-3xl text-center pt-4 text-emerald-900">Top Brand Shop</h1>
+    <!-- header area  -->
+        <h1 class="font-bold text-3xl text-center pt-4 text-emerald-900">Top Brand Shop Mobile</h1>
+    
     <!-- search area  -->
-    <section class="w-1/4 my-10 mx-auto">
-        <input id="input-fild" class="w-3/4 py-2 px-2 border-solid border-2 border-indigo-600 rounded-lg" type="text" placeholder="Search your phone...">
+    <section class="w-1/4 my-10 pr-5 mx-auto">
+        <input id="input-fild" class="my-2 py-2 px-2 border-solid border-2 border-indigo-600 rounded-lg" type="text" placeholder="Search your phone...">
         <button onclick="scarchPhone()" class="bg-sky-900 text-white rounded-lg py-3 px-4">Search</button>
     </section>
+    
     <!-- error area  -->
-    <p class="hidden text-red-500 text-center " id="error">Your search- did not match any Product..........!</p>
+    <p class="hidden text-red-500 text-center py-2" id="error">Your search- did not match any Product..........!</p>
     <!-- details information show -->
     <section class="w-2/4 mx-auto mb-5" id="information">
         <div class="grid grid-cols-2">
@@ -24,42 +27,14 @@
                 
             </div>
             <div id="infoshow" class="pl-5 pr-5">
-            
-                <!-- <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">Name:</span><span class="font-medium">Red</span></p>
-
-                <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">Color:</span><span class="font-medium">Red</span></p>
-
-                <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">Storage:</span><span class="font-medium">Red</span></p>
-
-                <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">DisplaySize:</span><span class="font-medium">Red</span></p>
-
-                <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">Memory:</span><span class="font-medium">Red</span></p>
-
-                <p class="border border-indigo-600 pl-5 py-2"><span class="font-semibold">ReleaseDate:</span><span class="font-medium">Red</span></p> -->
-                
             </div>
         </div>
     </section>
 
     <!-- box area -->
     <section class="w-11/12 mx-auto mb-5">
-        <div  id="showAllproduct"  class="grid grid-cols-3 gap-8">
-            <!-- <div class="py-8 bg-slate-50 rounded-2xl drop-shadow-lg">
-                <img class="w-80 mx-auto" src="Pexels Photo by Karolina Grabowska.png" alt="">
-                <div class="text-center">
-                <h1 class="font-bold">Name:</h1>
-                <span class="block py-2">Description:</span>
-                <button class="bg-sky-900 text-white rounded-lg py-3 px-4">Search</button>
-                </div>
-            </div>
-            <div class="bg-slate-50 rounded-2xl py-8 drop-shadow-lg">
-                <img class="w-80 mx-auto" src="Pexels Photo by Karolina Grabowska.png" alt="">
-                <div class="text-center">
-                <h1 class="font-bold">Name:</h1>
-                <span class="block py-2">Description:</span>
-                <button class="bg-sky-900 text-white rounded-lg py-3 px-4">Search</button>
-                </div>
-            </div> -->
+        <div  id="showAllproduct"  class="grid grid-cols-1 gap-8 sm:grid-cols-2 gap-8 md:grid-cols-3 gap-8">
+            
         </div>
     </section>
     
