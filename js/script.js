@@ -30,6 +30,25 @@ const showDetails=details=>{
     const url=`https://openapi.programming-hero.com/api/phone/${details}`
     fetch(url)
     .then(res =>res.json())
-    .then(data =>console.log(data))
+    .then(data =>allDetails(data))
 
+}
+
+const allDetails=importDetails=>{
+    const infoshow=document.getElementById('infoshow');
+        const div=document.createElement('div');
+        div.innerHTML=`
+        <h1 class="font-bold text-2xl text-center pt-4 ">Details</h1>
+
+        <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">Sensors:</span><span class="font-medium">${importDetails.data.mainFeatures.sensors[2]}</span></p>
+
+        <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">Storage:</span><span class="font-medium">${importDetails.data.mainFeatures.storage}</span></p>
+
+        <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">DisplaySize:</span><span class="font-medium">${importDetails.data.mainFeatures.displaySize}</span></p>
+
+        <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">Memory:</span><span class="font-medium">${importDetails.data.mainFeatures.memory}</span></p>
+
+        <p class="border border-indigo-600 pl-5 pr-3 pr-3 py-2"><span class="font-semibold">ChipSet:</span><span class="font-medium">${importDetails.data.mainFeatures.chipSet}</span></p>
+    </div>`;
+    infoshow.appendChild(div);
 }
